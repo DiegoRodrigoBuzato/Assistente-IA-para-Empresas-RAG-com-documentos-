@@ -20,6 +20,20 @@ Pergunta → Busca Semântica → Contexto → LLM → Resposta
 
 ---
 
+## 💡 Por que usar RAG?
+
+Enviar documentos inteiros para um LLM a cada pergunta é inviável: documentos longos consomem uma quantidade enorme de tokens, elevando o custo da API e, muitas vezes, degradando a qualidade das respostas — modelos tendem a "se perder" em contextos muito extensos.
+
+Este projeto resolve esse problema com a abordagem RAG:
+
+- **Economia de tokens**: em vez de enviar o documento completo, apenas os 3 trechos mais relevantes para a pergunta são enviados ao modelo. Um PDF de 100 páginas pode gerar centenas de chunks, mas o LLM recebe somente o essencial.
+- **Respostas mais precisas**: ao fornecer um contexto cirúrgico e diretamente relacionado à pergunta, o modelo foca no que importa e alucina menos.
+- **Escalabilidade**: a base de conhecimento pode crescer com dezenas de PDFs sem aumentar o custo por consulta.
+
+> Em termos práticos: ao invés de gastar milhares de tokens enviando um documento inteiro, você gasta apenas algumas centenas com os trechos certos — e ainda obtém respostas melhores.
+
+---
+
 ## 🗂️ Estrutura do Projeto
 
 ```
